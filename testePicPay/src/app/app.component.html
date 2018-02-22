@@ -1,20 +1,82 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="300" alt="Angular Logo" src="https://portaltelezap.com.br/wp-content/uploads/2017/12/26998603-711fcf30-4d5c-11e7-9281-0d9eb20337ad.png">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+    </div>
+    <div class="col-12 col-md-auto">
+      <!-- <div class="form-group">
+          ​<div class="text-center">
+              <img src="" class="rounded">
+          </div>
+      </div> -->
+      <div class="form-group">
+        <select class="custom-select" id="inputGroupSelect01" (change)="onSelectedSubSystem()">
+          <option selected>Selecione a Pessoa</option>
+          <option *ngFor='let pessoa of pessoas' [value]="pessoa.id">
+            {{pessoa.name}}
+          </option>
+        </select>
 
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Valor</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="R$">
+      </div>
+      <div class="form-group">
+        <label for="buttontext">Cartões</label>
+        <div class="input-group">
+          <select class="custom-select" id="inputGroupSelect04">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="buttontext" (click)="openModal(template)">Adicionar</button>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+    <div class="col col-lg-2">
+    </div>
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Novo Cartão</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <label for="modalNome">Nome</label>
+          <input type="text" class="form-control" id="modalNome" disabled>
+        </div>
+        <div class="col-md-12">
+          <label for="modalNumero">Número</label>
+          <input type="number" class="form-control" id="modalNumero">
+        </div>
+        <div class="col-md-8 col-sm-12">
+          <label for="modalValidade">Data de Validade</label>
+          <input type="date" class="form-control" id="modalValidade">
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <label for="modalCVV">CVV</label>
+          <input type="number" class="form-control" id="modalCVV">
+          <small id="emailHelp" class="form-text text-muted">Verso do Cartão</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="modalRef.hide()">Fechar</button>
+    <button type="button" class="btn btn-success">Adicionar Cartão</button>
+  </div>
+</ng-template>
