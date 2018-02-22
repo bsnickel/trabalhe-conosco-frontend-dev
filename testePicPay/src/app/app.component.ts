@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   pessoas: any
   selectedPessoa: any
+  modelPessoa: any
 
   public modalRef: BsModalRef; // {1}
   constructor(
@@ -23,15 +24,17 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.appService.getPessoas()
-    .subscribe(dados => {
-      this.pessoas = dados
-    });
+      .subscribe(dados => {
+        this.pessoas = dados
+      });
   }
 
-  public onSelectedSubSystem() {
-    console.log('pessoa selecionada', this.selectedPessoa);
+  public onSelectedPessoa() {
+    this.selectedPessoa = this.pessoas.filter(f => {
+      return f.id == this.modelPessoa
+    })
   }
-  
+
 
   public openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template); // {3}

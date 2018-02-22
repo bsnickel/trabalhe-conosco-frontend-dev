@@ -13,7 +13,7 @@
           </div>
       </div> -->
       <div class="form-group">
-        <select class="custom-select" id="inputGroupSelect01" (change)="onSelectedSubSystem()">
+        <select class="custom-select" id="inputGroupSelect01" (change)="onSelectedPessoa()" [(ngModel)]="modelPessoa">
           <option selected>Selecione a Pessoa</option>
           <option *ngFor='let pessoa of pessoas' [value]="pessoa.id">
             {{pessoa.name}}
