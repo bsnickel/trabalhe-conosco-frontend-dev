@@ -11,7 +11,6 @@ import { AppService } from './app.service';
 })
 export class AppComponent implements OnInit {
 
-
   title = 'app';
   pessoas: any
   selectedPessoa: any
@@ -26,6 +25,7 @@ export class AppComponent implements OnInit {
     this.appService.getPessoas()
       .subscribe(dados => {
         this.pessoas = dados
+        console.log(this.pessoas)
       });
   }
 
@@ -38,5 +38,10 @@ export class AppComponent implements OnInit {
 
   public openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template); // {3}
+  }
+
+
+  preencherModalForm(){
+    
   }
 }

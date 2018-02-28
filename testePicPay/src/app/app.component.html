@@ -1,50 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <img width="300" alt="Angular Logo" src="https://portaltelezap.com.br/wp-content/uploads/2017/12/26998603-711fcf30-4d5c-11e7-9281-0d9eb20337ad.png">
-</div>
-<div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col col-lg-2">
-    </div>
-    <div class="col-12 col-md-auto">
-      <!-- <div class="form-group">
-          ​<div class="text-center">
-              <img src="" class="rounded">
-          </div>
-      </div> -->
-      <div class="form-group">
-        <select class="custom-select" id="inputGroupSelect01" (change)="onSelectedPessoa()" [(ngModel)]="modelPessoa">
-          <option selected>Selecione a Pessoa</option>
-          <option *ngFor='let pessoa of pessoas' [value]="pessoa.id">
-            {{pessoa.name}}
-          </option>
-        </select>
 
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<div class="container col-md-12">
+  <nav class="navbar navbar-fixed-top Rectangle-2">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <h2 class=" Front-End-Test">| Front-End Test</h2>
       </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Valor</label>
-        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="R$">
-      </div>
-      <div class="form-group">
-        <label for="buttontext">Cartões</label>
-        <div class="input-group">
-          <select class="custom-select" id="inputGroupSelect04">
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="buttontext" (click)="openModal(template)">Adicionar</button>
-          </div>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-success">Enviar</button>
     </div>
-    <div class="col col-lg-2">
-    </div>
-  </div>
+  </nav>
 </div>
-
+<div class="container-fluid" style="margin-top:80px">
+    <table class="table">
+      <tbody>
+        <tr *ngFor='let pessoa of pessoas' class="Rectangle-2-Copy">
+          <td class="align-middle">
+            <img class="Oval border rounded-circle pull-right" src="{{pessoa.img}}" alt="">
+          </td>
+          <td class="align-middle">
+            <p class="name">{{pessoa.name}}</p>
+            <span class="name-copy-2">id: {{pessoa.id}}</span>
+            <span class="name-copy">{{pessoa.username}}</span>
+          </td>
+          <td class="align-middle">
+              <span class="badge badge-secondary Combined-Shape">$</span>
+            <p class="name-copy-3 hidden-xs">Pagar </p>
+            <p class="name-copy-3"> ></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
 <ng-template #template>
   <div class="modal-header">
     <h4 class="modal-title pull-left">Novo Cartão</h4>

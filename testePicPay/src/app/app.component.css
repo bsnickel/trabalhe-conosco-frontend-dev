@@ -1,0 +1,149 @@
+.desktop_lista_usuarios {
+    width: 100%;
+    height: 100%;
+}
+.Rectangle-2 {
+    width: 100%;
+    height: 80px;
+    background-color: #7de6c6;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+  .Oval {
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    border-width: medium;
+    border: aliceblue;
+  }
+  .Front-End-Test {
+    width: 148px;
+    height: 24px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #474971;
+  }
+  .Fill-1 {
+    width: 30px;
+    height: 26px;
+    background-color: #ffffff;
+  }
+  .Rectangle-4-Copy-2 {
+    width: 2px;
+    height: 32px;
+    background-color: #474971;
+  }
+  .Rectangle-4 {
+    width: 160px;
+    height: 3360px;
+  }
+  .Rectangle-2-Copy {
+    height: 120px;
+    background-image: linear-gradient(to left, #3c3e64, #1d1e2a);
+    box-shadow: 0 1px 0 0 #ffffff, 0 -1px 0 0 #ffffff;
+  }
+  .name {
+    width: 189px;
+    height: 28px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+  .name-copy-2 {
+    width: 75px;
+    height: 16px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+  .name-copy {
+    width: 50px;
+    height: 16px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+  .Oval {
+    width: 80px;
+    height: 80px;
+  }
+  .Combined-Shape {
+    color: #1d1e2a;
+    background-image: linear-gradient(to left, #b4f4e5, #7de6c6);
+  }
+  .name-copy-3 {
+    width: 65px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+  .Rectangle-5-Copy {
+    width: 640px;
+    height: 51px;
+    border-radius: 6px;
+    background-color: #474971;
+  }
+  .Rectangle-4-Copy-5 {
+    width: 640px;
+    height: 421px;
+    border-radius: 6px;
+    background-color: #ffffff;
+  }
+  .Shape-Copy {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    background-color: #ffffff;
+  }
+  .Pagamento-para-Nome {
+    width: 248px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #7de6c6;
+  }
+  .Pagamento-para-Nome .text-style-1 {
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .Combined-Shape2 {
+    width: 18px;
+    height: 28px;
+    background-color: #d8d8d8;
+  }
